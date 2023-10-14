@@ -1,0 +1,5 @@
+PYCODE STYLE:
+pycodestyle --first
+
+documentation
+python -c 'print(__import__("my_module").__doc__)'
