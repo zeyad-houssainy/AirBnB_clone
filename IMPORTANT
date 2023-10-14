@@ -1,5 +1,6 @@
 PYCODE STYLE:
 pycodestyle --first
 
-documentation
-python -c 'print(__import__("my_module").__doc__)'
+
+UNITTEST
+python3 -m unittest discover tests
