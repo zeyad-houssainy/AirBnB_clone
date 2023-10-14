@@ -1,6 +1,9 @@
 #!/usr/bin/python3
 """Basemodel for the whole project"""
+import unittest
 
 
-class BaseModel():
-    print
+def add(a, b):
+    """Testing unittest feature"""
+    return (a+b)
+
