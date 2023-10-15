@@ -8,7 +8,7 @@ Unittest classes:
 """
 
 import unittest
-from models.base_model import *
+from models.base_model import add
 
 
 
