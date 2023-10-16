@@ -1,0 +1,8 @@
+PYCODE STYLE:
+cd C:\Users\Zeyad\Documents\GitHub\AirBnB_clone\models
+pycodestyle --first base_model.py
+
+
+UNITTEST
+cd C:\Users\Zeyad\Documents\GitHub\AirBnB_clone
+python -m unittest discover tests
