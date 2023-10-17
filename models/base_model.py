@@ -13,8 +13,8 @@ class BaseModel():
             **kwargs: key:value of attributes
         """
         self.id = str(uuid.uuid4())
-        self.created_at = datetime.now()
-        self.updated_at = datetime.now()
+        self.created_at = datetime.now().strftime("%Y-%m-%dT%H:%M:%S.%f")
+        self.updated_at = datetime.now().strftime("%Y-%m-%dT%H:%M:%S.%f")
 
     def __str__(self):
         """return a specific format for the class"""
@@ -30,7 +30,7 @@ class BaseModel():
         copy_dict["__class__"] = self.__class__.__name__
         # for k,v in copy_dict.items():
         #     if k == "created_at" or k == "updated_at":
-        #         k = strftime("%Y-%m-%dT%H:%M:%S.%f")
+        #         v = v.strftime("%Y-%m-%dT%H:%M:%S.%f")
         # print(copy_dict)
         return (copy_dict)
 
