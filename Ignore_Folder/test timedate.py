@@ -17,4 +17,4 @@ delta = timedelta(
 
 print(delta)
 print(f"Total seconds: {delta.total_seconds()}")
-print(f"Total minutes: {delta.total_}")
+# print(f"Total minutes: {delta.total_}")
