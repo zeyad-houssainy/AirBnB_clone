@@ -1,0 +1,23 @@
+.container{
+    border: 1px solid black;
+    height: 80vh;
+    width: 80%;
+    justify-content: center;
+    align-items: stretch;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+
+.temp{
+    color: white;
+    width: 300pt;
+    height: 300pt;
+    background-color: lightblue;
+    font-size: 28pt;
+    border: 1px solid black;
+    border-radius: 50px/ 50px 60px;
+}
+

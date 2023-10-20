@@ -1,0 +1,25 @@
+function ClearETA() {
+    var spreadsheet = SpreadsheetApp.getActive();
+    spreadsheet.getRange('C9:Z158').activate();
+    spreadsheet.setCurrentCell(spreadsheet.getRange('Z9'));
+    spreadsheet.getActiveRangeList().clear({ contentsOnly: true, skipFilteredRows: true });
+    spreadsheet.getRange('S9').activate();
+    spreadsheet.getCurrentCell().setFormula('=if(H9="", "", (ifna(if(LOOKUP("DirectDelivery", I9:R9) = "DirectDelivery", "YES" ,"NO"), "NO")) )');
+    spreadsheet.getRange('T9').activate();
+    spreadsheet.getCurrentCell().setFormula('=if(H9="", "", (ifna(if(LOOKUP("Delivered_By_NICA", I9:R9) = "Delivered_By_NICA",  "YES" ,"NO"), "NO")) )');
+    spreadsheet.getRange('U9').activate();
+    spreadsheet.getCurrentCell().setFormula('=ifs(ISBLANK(H9), "", H9="In Progress" , "", H9="Ready for Offshore Review" , "DONE",H9="In Offshore Review" , "DONE", H9="Rework" , "DONE", H9="Rework from QA", "DONE", H9="Ready for 2nd Offshore Review", "DONE", H9="In 2nd Offshore Review", "DONE") ');
+    spreadsheet.getRange('V9').activate();
+    spreadsheet.getCurrentCell().setFormula('=ifs(ISBLANK(H9), "", H9="In Progress" , "", H9="Ready for Offshore Review" , "", H9="In Offshore Review", "" , H9="Rework" , "DONE", H9="Rework from QA", "DONE", H9="Ready for 2nd Offshore Review", "DONE", H9="In 2nd Offshore Review", "DONE") ');
+    spreadsheet.getRange('Y9').activate();
+    spreadsheet.getCurrentCell().setFormula('=SUM(U9:X9)');
+    spreadsheet.getRange('C9:Z9').activate();
+    spreadsheet.getActiveRange().autoFill(spreadsheet.getRange('C9:Z158'), SpreadsheetApp.AutoFillSeries.DEFAULT_SERIES);
+    spreadsheet.getRange('C160:Z209').activate();
+    spreadsheet.getActiveRangeList().clear({ contentsOnly: true, skipFilteredRows: true });
+    spreadsheet.getRange('S160').activate();
+    spreadsheet.getRange('S9:Y9').copyTo(spreadsheet.getActiveRange(), SpreadsheetApp.CopyPasteType.PASTE_NORMAL, false);
+    spreadsheet.getRange('C160:Z160').activate();
+    spreadsheet.getActiveRange().autoFill(spreadsheet.getRange('C160:Z209'), SpreadsheetApp.AutoFillSeries.DEFAULT_SERIES);
+    spreadsheet.getRange('C160:Z209').activate();
+};
