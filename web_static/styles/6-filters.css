@@ -55,7 +55,7 @@ button:hover {
 
 .popover{
     list-style-type: none;
-    /* visibility: hidden; */
+    visibility: hidden;
     background-color: #FAFAFA;
     border:1px  solid #DDDDDD;
     padding-bottom: 20px;
