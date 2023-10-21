@@ -12,7 +12,6 @@
 }
 
 button {
-
     font-size: 18px;
     background-color: #FF5A5F;
     color: #FFFFFF;
@@ -27,29 +26,53 @@ button:hover {
     opacity: 90%;
 }
 
-.locations,
-.amenities {
+.locations, .amenities{
     height: 100%;
     width: 25%;
     text-align: left;
     float: left;
+    border: 2px solid blue;
     position: relative;
     left: -19em;
 }
 
-.locations {
+.locations{
     border-right: 1px solid #DDDDDD;
 }
 
-.title {
+.title{
     font-weight: 600;
     margin-left: 30px;
     margin-bottom: 0;
 }
 
-.subtitle {
+.subtitle{
     margin-left: 30px;
     margin-top: 0;
     font-weight: 400;
     font-size: 14px;
 }
+
+.popover{
+    list-style-type: none;
+    /* visibility: hidden; */
+    background-color: #FAFAFA;
+    border:1px  solid #DDDDDD;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    
+}
+
+.popover h2{
+    font-size: 16px;
+    margin: 10px 0 0 0;
+}
+
+.amenities:hover .popover,.locations:hover .popover{
+    visibility: visible;
+}
+
+li{
+    margin-bottom: 3%;
+}
+
