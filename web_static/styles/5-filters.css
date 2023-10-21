@@ -17,9 +17,19 @@ button {
     border: 0;
     border-radius: 4px;
     align-content: center;
+    display: flex;
+    flex-direction: row;
     margin: auto 30px auto 0;
 }
 
-button:hover{
+button:hover {
     opacity: 90%;
+}
+
+.locations{
+    
+}
+
+.amenities{
+    
 }
